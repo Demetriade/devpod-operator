@@ -1,0 +1,8 @@
+apiVersion: com.bell.cts.hackathon2023/v1
+kind: DevPod
+metadata:
+  name: devpod-java17-emile
+spec:
+  owner: emile
+  flavor: java11
+  gitRepository: gke-remote-dev-environment

@@ -1,0 +1,4 @@
+{
+	"name": "idea-demo",
+	"image":  "openjdk:11"
+}

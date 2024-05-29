@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: repo-pv-claim
+  namespace: hackathon-2023
+spec:
+  storageClassName: standard-rwo
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ch6106353-java11-devpod
+  namespace: hackathon-2023
+  labels:
+    app: ch6106353-java11-devpod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ch6106353-java11-devpod
+  template:
+    metadata:
+      labels:
+        app: ch6106353-java11-devpod
+    spec:
+      volumes:
+      - name: repo-pv-storage
+        persistentVolumeClaim:
+          claimName: repo-pv-claim
+      containers:
+      - name: ch6106353-java11-devpod
+        image: localhost/devpod-java-test:0.0.1
+        command: ["sleep", "infinity"]
+        volumeMounts:
+        - mountPath: /repo
+          name: repo-pv-storage
+        imagePullPolicy: Never
+
