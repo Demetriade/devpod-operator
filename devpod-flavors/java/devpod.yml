@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: repo-pv-claim
-  namespace: hackathon-2023
+  namespace: cncf
 spec:
   storageClassName: standard-rwo
   accessModes:
@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ch6106353-java11-devpod
-  namespace: hackathon-2023
+  namespace: cncf
   labels:
     app: ch6106353-java11-devpod
 spec:

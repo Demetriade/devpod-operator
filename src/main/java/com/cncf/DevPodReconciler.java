@@ -1,7 +1,7 @@
-package cncf;
+package com.cncf;
 
-import cncf.crds.DevPod;
-import cncf.crds.DevPodStatus;
+import com.cncf.crds.DevPod;
+import com.cncf.crds.DevPodStatus;
 import io.fabric8.kubernetes.api.model.apps.Deployment;
 import io.fabric8.kubernetes.api.model.apps.DeploymentStatus;
 import io.javaoperatorsdk.operator.api.reconciler.*;

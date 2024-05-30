@@ -1,4 +1,4 @@
-package cncf.crds;
+package com.cncf.crds;
 
 public class DevPodSpec {
 

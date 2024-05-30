@@ -1,7 +1,7 @@
-package cncf;
+package com.cncf;
 
 
-import cncf.crds.DevPod;
+import com.cncf.crds.DevPod;
 import io.fabric8.kubernetes.api.model.PersistentVolumeClaim;
 import io.javaoperatorsdk.operator.api.reconciler.Context;
 import io.javaoperatorsdk.operator.processing.dependent.kubernetes.CRUDKubernetesDependentResource;

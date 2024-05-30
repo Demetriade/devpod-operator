@@ -1,8 +1,8 @@
-apiVersion: cncf/v1
+apiVersion: com.cncf/v1
 kind: DevPod
 metadata:
-  name: devpod-java17-emile
+  name: devpod-java311-emile
 spec:
   owner: emile
-  flavor: java11
-  gitRepository: gke-remote-dev-environment
+  flavor: python3.11
+  gitRepository: devpod-operator

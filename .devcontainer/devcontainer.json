@@ -1,4 +1,4 @@
 {
 	"name": "idea-demo",
-	"image":  "openjdk:11"
+	"workspaceFolder": "/root"
 }

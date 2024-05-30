@@ -1,4 +1,4 @@
-package cncf.crds;
+package com.cncf.crds;
 
 import io.javaoperatorsdk.operator.api.ObservedGenerationAwareStatus;
 

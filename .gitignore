@@ -39,3 +39,10 @@ nb-configuration.xml
 # Local environment
 .env
 
+#VS Code server
+.dotnet/
+.m2/
+.vscode-server/
+.bash_history
+.gitconfig
+

@@ -1,8 +1,8 @@
-apiVersion: cncf/v1
+apiVersion: com.cncf/v1
 kind: DevPod
 metadata:
-  name: devpod-java17-charles
+  name: devpod-java11-charles
 spec:
   owner: charles
-  flavor: java17
-  gitRepository: gke-remote-dev-environment
+  flavor: java11
+  gitRepository: devpod-operator

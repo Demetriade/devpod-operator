@@ -1,4 +1,4 @@
-package cncf;
+package com.cncf;
 
 import io.javaoperatorsdk.operator.Operator;
 import org.slf4j.Logger;
