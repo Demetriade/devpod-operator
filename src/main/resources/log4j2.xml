@@ -6,7 +6,7 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Logger level="debug" name="com.bell.cts.hackathon2023" additivity="false">
+    <Logger level="debug" name="cncf" additivity="false">
       <AppenderRef ref="Console"/>
     </Logger>
     <Root level="info">

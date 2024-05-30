@@ -1,7 +1,7 @@
-package com.bell.cts.hackathon2023;
+package cncf;
 
-import com.bell.cts.hackathon2023.crds.DevPod;
-import com.bell.cts.hackathon2023.crds.DevPodStatus;
+import cncf.crds.DevPod;
+import cncf.crds.DevPodStatus;
 import io.fabric8.kubernetes.api.model.apps.Deployment;
 import io.fabric8.kubernetes.api.model.apps.DeploymentStatus;
 import io.javaoperatorsdk.operator.api.reconciler.*;

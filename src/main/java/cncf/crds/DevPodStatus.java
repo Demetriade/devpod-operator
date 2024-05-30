@@ -1,4 +1,4 @@
-package com.bell.cts.hackathon2023.crds;
+package cncf.crds;
 
 import io.javaoperatorsdk.operator.api.ObservedGenerationAwareStatus;
 

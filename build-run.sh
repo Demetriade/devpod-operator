@@ -7,4 +7,4 @@ mvn jib:dockerBuild
 kubectl apply -f ./k8s/operator.yaml
 
 mvn clean compile
-kubectl apply -f ./target/classes/META-INF/fabric8/devpods.com.bell.cts.hackathon2023-v1.yml
+kubectl apply -f ./target/classes/META-INF/fabric8/devpods.cncf-v1.yml

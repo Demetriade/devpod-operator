@@ -1,7 +1,7 @@
-package com.bell.cts.hackathon2023;
+package cncf;
 
 
-import com.bell.cts.hackathon2023.crds.DevPod;
+import cncf.crds.DevPod;
 import io.fabric8.kubernetes.api.model.apps.Deployment;
 import io.javaoperatorsdk.operator.api.reconciler.Context;
 import io.javaoperatorsdk.operator.processing.dependent.kubernetes.CRUDKubernetesDependentResource;

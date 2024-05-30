@@ -1,4 +1,4 @@
-apiVersion: com.bell.cts.hackathon2023/v1
+apiVersion: cncf/v1
 kind: DevPod
 metadata:
   name: devpod-java17-charles

@@ -1,4 +1,4 @@
-package com.bell.cts.hackathon2023;
+package cncf;
 
 import io.javaoperatorsdk.operator.Operator;
 import org.slf4j.Logger;
