@@ -9,6 +9,6 @@ spec:
   capacity:
     storage: 256Mi
   storageClassName: standard
-  persistentVolumeReclaimPolicy: Delete
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /mount/repo
