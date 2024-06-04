@@ -4,9 +4,10 @@ metadata:
   name: ""
   namespace: cncf
 spec:
-  storageClassName: standard-rwo
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 256Mi
+  volumeName: ""

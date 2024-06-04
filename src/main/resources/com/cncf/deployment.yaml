@@ -22,6 +22,5 @@ spec:
               name: repo-pv-storage
       volumes:
         - name: repo-pv-storage
-          hostPath:
-            path: /mount/repo
-            type: Directory
+          persistentVolumeClaim:
+            claimName: ""
