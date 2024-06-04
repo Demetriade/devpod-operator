@@ -25,10 +25,10 @@ public class PVDependentResource extends CRUDKubernetesDependentResource<Persist
         labels.put("app.kubernetes.io/managed-by", "remote-dev-operator");
         String namePrefix = devPod.getSpec().getOwner() + "-" + devPod.getSpec().getFlavor();
         String pvName = namePrefix + "-pv";
-        PersistentVolume pvc = loadYaml(PersistentVolume.class, getClass(), "pvc.yaml");
-        pvc.getMetadata().setName(pvName);
-        pvc.getMetadata().setLabels(labels);
+        PersistentVolume pv = loadYaml(PersistentVolume.class, getClass(), "pv.yaml");
+        pv.getMetadata().setName(pvName);
+        pv.getMetadata().setLabels(labels);
 
-        return pvc;
+        return pv;
     }
 }
