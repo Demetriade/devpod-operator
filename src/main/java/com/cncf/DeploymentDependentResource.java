@@ -20,8 +20,9 @@ public class DeploymentDependentResource extends CRUDKubernetesDependentResource
 
     @Override
     protected Deployment desired(DevPod devPod, Context<DevPod> context) {
-        String deploymentName = devPod.getSpec().getOwner() + "-" + devPod.getSpec().getFlavor() + "-devpod";
-        String pvcName = devPod.getSpec().getOwner() + "-" + devPod.getSpec().getFlavor() + "-pvc";
+        String namePrefix = devPod.getSpec().getOwner() + "-" + devPod.getSpec().getFlavor();
+        String deploymentName = namePrefix + "-devpod";
+        String pvcName = namePrefix + "-pvc";
         Map<String, String> labels = new HashMap<>();
         labels.put("app.kubernetes.io/managed-by", "remote-dev-operator");
         labels.put("app", deploymentName);
@@ -45,13 +46,13 @@ public class DeploymentDependentResource extends CRUDKubernetesDependentResource
                 .getContainers()
                 .get(0)
                 .setName(deploymentName);
-//        deployment.getSpec()
-//                .getTemplate()
-//                .getSpec()
-//                .getVolumes()
-//                .get(0)
-//                .getPersistentVolumeClaim()
-//                .setClaimName(pvcName);
+        deployment.getSpec()
+                .getTemplate()
+                .getSpec()
+                .getVolumes()
+                .get(0)
+                .getPersistentVolumeClaim()
+                .setClaimName(pvcName);
         return deployment;
     }
 }
