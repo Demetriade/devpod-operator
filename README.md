@@ -13,6 +13,7 @@ mvn jib:dockerBuild
 ```bash
 # Create a new namespace
 kubectl create namespace "cncf"
+kubectl config set-context --namespace=cncf --current
 # Install the Operator
 kubectl apply -f ./k8s/operator.yaml
 # Install the CRDs
