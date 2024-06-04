@@ -2,6 +2,7 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: ""
+  namespace: cncf
 spec:
   selector:
     matchLabels:
@@ -22,6 +23,5 @@ spec:
               name: repo-pv-storage
       volumes:
         - name: repo-pv-storage
-          hostPath:
-            path: /mount/repo
-            type: Directory
+          persistentVolumeClaim:
+            claimName: ""

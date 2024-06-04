@@ -12,8 +12,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Objects;
 
 @ControllerConfiguration(dependents = {
-        @Dependent(type = DeploymentDependentResource.class),
-//        @Dependent(type = PVCDependentResource.class)
+        @Dependent(type = PVDependentResource.class),
+        @Dependent(type = PVCDependentResource.class),
+        @Dependent(type = DeploymentDependentResource.class)
 })
 public class DevPodReconciler implements Reconciler<DevPod> {
 
